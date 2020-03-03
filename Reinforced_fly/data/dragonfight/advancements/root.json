@@ -1,0 +1,16 @@
+{
+    "display": {
+        "title": "DragonFight",
+        "description": "一味も二味も変わった戦いをあなたに。",
+        "icon": {
+            "item": "dragon_head"
+        },
+        "background": "minecraft:textures/gui/advancements/backgrounds/end.png",
+        "frame": "task"
+    },
+    "criteria": {
+        "root": {
+            "trigger": "impossible"
+        }
+    }
+}

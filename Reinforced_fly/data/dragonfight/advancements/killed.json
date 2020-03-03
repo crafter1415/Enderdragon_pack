@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": "ドラゴンの宿命",
+        "description": "敗因は相手がクラフターだったこと？",
+        "icon": {
+            "item": "dragon_head"
+        },
+        "frame": "challenge"
+    },
+    "parent": "dragonfight:root",
+    "criteria": {
+        "killed_dragon": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+              "entity": {
+                "type": "minecraft:ender_dragon"
+              }
+            }
+        }
+    },
+    "rewards": {
+        "function":"dragonfight:dragon/killed"
+    }
+}

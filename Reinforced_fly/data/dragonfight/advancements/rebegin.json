@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": "終わりなき戦い",
+        "description": "そして永遠に殺されるドラゴン、諸行無常。",
+        "icon": {
+            "item": "dragon_head"
+        },
+        "frame": "challenge"
+    },
+    "parent": "dragonfight:root",
+    "criteria": {
+        "summoned_dragon": {
+            "trigger": "minecraft:summoned_entity",
+            "conditions": {
+              "entity": {
+                "type": "minecraft:ender_dragon"
+              }
+            }
+        }
+    },
+    "rewards": {
+        "function":"dragonfight:end_setup"
+    }
+}

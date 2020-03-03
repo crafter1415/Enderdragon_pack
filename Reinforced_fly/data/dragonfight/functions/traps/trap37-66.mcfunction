@@ -1,0 +1,2 @@
+execute as @s[scores={df_id=37..56}] run summon minecraft:fireball ~ ~-1.5 ~ {ExplosionPower:50,direction:[0.0,-10.0,0.0]}
+execute as @s[scores={df_id=57..66}] run summon minecraft:lightning_bolt ~ ~ ~
