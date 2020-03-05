@@ -13,24 +13,16 @@ tag @e[tag=dfSpawner] remove dfSpawner
 tag @e[tag=dfActive] remove dfActive
 kill @e[tag=dfCrystal,type=minecraft:armor_stand]
 tag @e[tag=dfCrystal] remove dfCrystal
-scoreboard players set #stack df_EndFlag 32
 tag @e[tag=dfCrSeted] remove dfCrSeted
 
-#トラップをばら撒く
-#文字通り、ばら撒く
-#ロード待ちで償還されないからここはメインで
-#2^4=16
-#16*32=512
-#エンドの中心から半径100m以内に500個トラップを配置しました。頑張って！
+#トラップの生成回数もリセット
+scoreboard players set #stack df_EndFlag 32
 
-#クリスタルの位置にエンティティ召喚
-execute as @e[type=minecraft:end_crystal,tag=!dfCrSeted,nbt={ShowBottom:1b}] at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["dfCrystal","dftick"],NoGravity:1b,Invisible:1b,Invulnerable:1b,Marker:1b,DisabledSlots:2039583}
-tag @e[type=minecraft:end_crystal,tag=!dfCrSeted,nbt={ShowBottom:1b}] add dfCrSeted
+#他の処理はほぼメインでやってる。
+#ここでやるのはフラグ処理と生成回数の設定のみ。
 
-#ドラゴンの体力を500にしてタグtickを付与
-#これも生成されてないことがあるからメインで
-
-#召喚された場合召喚フラグを撤去
+#召喚された場合進捗をクリア
 advancement revoke @a only dragonfight:rebegin
 
+#エンド設定済みフラグを立てる。これがないとまともに動かない。
 scoreboard players set #Flag df_EndFlag 1

@@ -1,3 +1,4 @@
+#罠0:バフ消去 手痛い分確率は低い。
 effect clear @a[distance=..0.5] minecraft:absorption
 effect clear @a[distance=..0.5] minecraft:fire_resistance
 effect clear @a[distance=..0.5] minecraft:haste

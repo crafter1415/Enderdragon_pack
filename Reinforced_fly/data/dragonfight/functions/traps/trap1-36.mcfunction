@@ -1,3 +1,6 @@
+#罠1~36 デバフ
+#視覚に影響を与えるデバフが短かったり、ダメージとそれにつながる系は短めだったりする。
+#後、確率も調整されてる。これはただ単になんとなく。
 execute as @s[scores={df_id=1..5}] run effect give @a[distance=..0.5] minecraft:slowness 180 2
 execute as @s[scores={df_id=6..10}] run effect give @a[distance=..0.5] minecraft:mining_fatigue 180 2
 execute as @s[scores={df_id=11..12}] run effect give @a[distance=..0.5] minecraft:instant_damage 1 1
