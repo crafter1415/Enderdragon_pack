@@ -29,6 +29,8 @@
    エンドクリスタルが15分で復活
    エンドクリスタルが2~3分毎にモンスターを召喚する
    エンダードラゴンが1分毎(最小20秒毎)にTNTを投下する
+   エンダードラゴンが上と同様の頻度で矢を投下する
+   エンダードラゴンが上と同様の頻度で火の玉を発射する
    エンダードラゴンが近づくと毒を付与するようになる
    エンダードラゴンの最大体力が500になる
    エンダードラゴンの体力が半分以下になったとき全快する (一度のみ)
@@ -54,13 +56,15 @@
 
   使用タグ：
     dftrap, dfmakeTrap, dftick, dfHealed, dfHealing, dfHardend, dfSpawner,
-    dfActive, dfCrystal, dfCrSeted
+    dfActive, dfCrystal, dfCrSeted, dfArrow, dfnotrandomized, dfFireball, dfNotFaced
 
   使用スコアとシステム変数：
     df_EndFlag - #Flag
-    df_NUM - #1, #12, #67, #100, #Players, #Time
+    df_NUM - #1, #12, #67, #100, #1000, #Players, #Time
     df_id
     df_tick
+    df_MotionX
+    df_MotionZ
 
   使用した進捗：
     dragonfight:rebegin
@@ -78,6 +82,11 @@
  某パックも併用して遊ぶことを推奨します。
 
 7、変更履歴
+ 20/05/30 v1.1
+     - 矢と火の玉を飛ばすように
+     - トラップ生成部分の補正
+     - 敵の召喚量の補正
+     - エンドラの休憩を無効化
  20/03/05 beta 1.0.1
      - クリスタル再召喚までの時間を調整
      - 各所に説明を追加
