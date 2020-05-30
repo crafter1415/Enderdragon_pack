@@ -75,7 +75,6 @@ readmeと違って、詳細付き。
 >   df_EndFlag - #Flag  
 >   df_NUM - #1, #12, #67, #100, #1000, #Players, #Time  
 >   df_MotionX  
->   df_MotionY  
 >   df_MotionZ  
 >   df_tick  
 > **使用した進捗**：  
