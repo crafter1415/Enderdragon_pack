@@ -15,11 +15,10 @@ kill @e[tag=dfCrystal,type=minecraft:armor_stand]
 tag @e[tag=dfCrystal] remove dfCrystal
 tag @e[tag=dfCrSeted] remove dfCrSeted
 
-#トラップの生成回数もリセット
-scoreboard players set #stack df_EndFlag 32
+#トラップの生成
+function dragonfight:traps/generate
 
 #他の処理はほぼメインでやってる。
-#ここでやるのはフラグ処理と生成回数の設定のみ。
 
 #召喚された場合進捗をクリア
 advancement revoke @a only dragonfight:rebegin
